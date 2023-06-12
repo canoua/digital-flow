@@ -71,12 +71,12 @@ function fonts() {
     .pipe(dest('src/fonts'))
     .pipe(dest('build/fonts'))
 }
-function fontsWoff2() {
-  return src('src/fonts/*')
-    .pipe(ttf2woff2())
-    .pipe(dest('src/fonts'))
-    .pipe(dest('build/fonts'))
-}
+// function fontsWoff2() {
+//   return src('src/fonts/*')
+//     .pipe(ttf2woff2())
+//     .pipe(dest('src/fonts'))
+//     .pipe(dest('build/fonts'))
+// }
 
 function buildFonts() {
   return src('src/fonts/*')
@@ -102,7 +102,7 @@ function serve() {
 
 //перед работой сконвертировать шрифты
 exports.fonts = fonts
-exports.fontsWoff2 = fontsWoff2
+// exports.fontsWoff2 = fontsWoff2
 exports.buildFonts = buildFonts
 
 //для тестов

@@ -1,0 +1,58 @@
+.desktop{
+  height: 100vh;
+  background-image: url('./../images/bg-desktop.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 26px;
+
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  
+
+  &:hover{
+    #menu__span-2, #menu__span-3{
+      width: 100%;
+    }
+  }
+  
+  span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 3px;
+    transition: all .3s;
+
+    &-2{
+      width: 75%;
+    } 
+
+    &-3{
+      width: 50%;
+    }
+  }
+}
+
+#menu__span-2{
+  width: 75%;
+}
+
+#menu__span-3{
+  width: 50%;
+}
