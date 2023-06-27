@@ -1,5 +1,5 @@
 .desktop{
-  height: 100vh;
+  height: 948px;
   background-image: url('./../images/bg-desktop.png');
   background-repeat: no-repeat;
   background-position: center top;
@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 70px;
   }
   
   &__header{
