@@ -1,0 +1,46 @@
+.about{
+
+  &-inner{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box{
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    &_right{
+      background-color: #F1F1F1;
+      padding-left: 107px;
+  
+      &-inner{
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__title{
+    text-align: right;
+    display: block;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  &__box > img {
+    display: block;
+    width: 100%;
+  }
+
+  &__text{
+    text-align: right;
+
+    &_mb40{
+      margin-bottom: 40px;
+    }
+  }
+}
