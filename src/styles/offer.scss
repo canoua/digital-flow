@@ -1,0 +1,32 @@
+.offer{
+  background-color: #1A1F25;
+  padding: 90px 0;
+
+  &__title{
+    color: #FFF;
+    text-align: center;
+
+    &_mb{
+      margin-bottom: 80px;
+    }
+  }
+
+  &__box{
+    width: 233px;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #595959;
+
+    &__title{
+      text-align: center;
+      color: #FFF;
+    }
+  }
+
+  &__btn{
+    border-color: #FFF;
+    color: #FFF;
+  }
+}
