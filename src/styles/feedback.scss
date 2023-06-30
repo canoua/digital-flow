@@ -1,0 +1,209 @@
+.feedback{
+  position: relative;
+  padding: 173px 0;
+
+  &::before{
+    content: '';
+    width: 50%;
+    height: 100%;
+    background-image: url('./../images/feedback1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &::after{
+    content: '';
+    width: 50%;
+    height: 100%;
+    background-color: #000201;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &-inner{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box{
+    width: 50%;
+  }
+
+  &__title{
+    color: #fff;
+    margin-bottom: 80px;
+
+    &_right{
+      text-align: right;
+    }
+  }
+
+  &__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 73px;
+
+    &__group{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+
+      &:last-child{
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &__label{
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+
+  &__input,
+  &__textarea{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Montserrat';
+    font-style: normal;
+  }
+
+  &__textarea{
+    resize: none;
+  }
+
+  &__btn{
+    width: 194px;
+    padding: 14px 30px;
+    background: transparent;
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: 1px solid #FFF;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+
+    &::after{
+      content: '';
+      background-image: url('./../images/right-arrow-white.svg');
+      width: 12px;
+      height: 12px;
+      background-size: contain;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &__card{
+    color: #fff;
+    width: 33%;
+    border: 1px solid #fff;
+    padding: 59px 14px 30px 14px;
+    position: relative;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      left: 59px;
+      top: -1px;
+      width: 78px;
+      height: 2px;
+      background-color: #000;
+      z-index: 1;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      left: 58px;
+      top: 0;
+      border: 1px solid #fff;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #000;
+      background-position: bottom;
+      width: 78px;
+      height: 39px;
+      border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    }
+
+    &_active{
+      background-image: url('./../images/feedback-card-bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: transparent;
+
+      &::after{
+        border: 1px solid #000;
+      }
+    }
+
+    &-wrapper{
+      padding-left: 30px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__title{
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 15px;
+    }
+
+    &__info{
+      color: #E8E8E8;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 44px;
+    }
+
+    &__sale{
+      text-decoration: line-through;
+      margin-bottom: 5px;
+    }
+
+    &__price{
+      font-size: 24px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}
