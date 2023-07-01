@@ -1,0 +1,20 @@
+.portfolio{
+  padding-top: 90px;
+
+  &__title{
+    margin-bottom: 70px;
+  }
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+
+  &-wrapper{
+    display: flex;
+  }
+}
+
+.slide{
+  width: 100%;
+}
