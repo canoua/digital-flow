@@ -25,6 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     border: 1px solid #595959;
 
     &-1{
@@ -89,6 +90,10 @@
     &-13 { 
       grid-area: 3 / 4 / 4 / 5; 
       border-bottom: none;
+    }
+
+    &__image{
+      margin-bottom: 20px;
     }
 
     &__title{
