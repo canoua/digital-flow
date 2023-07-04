@@ -13,6 +13,10 @@
     &_right{
       background-color: #F1F1F1;
       padding-left: 107px;
+
+      @media(max-width: 1253px) {
+        padding-left: 50px;
+      }
   
       &-inner{
         width: 500px;

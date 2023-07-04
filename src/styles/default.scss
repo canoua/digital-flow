@@ -16,6 +16,11 @@ li{
 .container{
   width: 1214px;
   margin: 0 auto;
+
+  @media(max-width: 1253px) {
+    width: auto;
+    padding: 0 30px;
+  }
 }
 
 .title{
