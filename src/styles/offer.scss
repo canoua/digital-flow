@@ -12,6 +12,10 @@
     @media(max-width: 1253px) {
       grid-template-columns: repeat(5, 20%);
     }
+
+    @media(max-width: 1068px) {
+      grid-template-columns: repeat(4, 25%);
+    }
   }
 
   &__title{

@@ -10,6 +10,10 @@
   &-inner{
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: 1160px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__box{

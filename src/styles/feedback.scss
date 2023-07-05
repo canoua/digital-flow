@@ -1,6 +1,7 @@
 .feedback{
   position: relative;
   padding: 173px 0;
+  height: auto;
 
   &::before{
     content: '';
@@ -13,6 +14,10 @@
     top: 0;
     left: 0;
     z-index: -1;
+
+    @media(max-width: 1253px) {
+      width: 100%;
+    }
   }
 
   &::after{
@@ -24,23 +29,52 @@
     top: 0;
     right: 0;
     z-index: -1;
+
+    @media(max-width: 1253px) {
+      display: none;
+    }
   }
 
   &-inner{
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: 1253px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__box{
     width: 50%;
+
+    @media(max-width: 1253px) {
+      width: 70%;
+    }
+
+    &:first-child{
+      
+      @media(max-width: 1253px) {
+        margin-bottom: 100px;
+      }
+    }
   }
 
   &__title{
     color: #fff;
     margin-bottom: 80px;
 
+    @media(max-width: 1253px) {
+      text-align: center;
+    }
+
     &_right{
       text-align: right;
+
+      @media(max-width: 1253px) {
+        text-align: center;
+      }
     }
   }
 
@@ -49,6 +83,10 @@
     flex-direction: column;
     justify-content: space-between;
     padding-right: 73px;
+
+    @media(max-width: 1253px) {
+      padding-right: 0;
+    }
 
     &__group{
       display: flex;
@@ -115,6 +153,10 @@
       top: 50%;
       transform: translate(0, -50%);
     }
+
+    @media(max-width: 1253px) {
+      margin: 0 auto;
+    }
   }
 
   &__card{
@@ -141,6 +183,10 @@
       height: 2px;
       background-color: #000;
       z-index: 1;
+
+      @media(max-width: 1253px) {
+        display: none;
+      }
     }
 
     &::after{
@@ -156,6 +202,10 @@
       width: 78px;
       height: 39px;
       border-radius: 0 0 50% 50% / 0 0 100% 100%;
+
+      @media(max-width: 1253px) {
+        display: none;
+      }
     }
 
     &_active{
@@ -174,6 +224,10 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
+
+      @media(max-width: 1253px) {
+        padding-left: 20px;
+      }
     }
 
     &__title{

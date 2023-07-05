@@ -5,14 +5,27 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media(max-width: 1200px) {
+    background-position: center;
+  }
+
   &__title{
     margin-bottom: 90px;
+
+    @media(max-width: 1253px) {
+      text-align: center;
+    }
   }
 
   &-inner{
     display: grid;
     grid-template-columns: 50% 2fr;
     grid-row-gap: 62px;
+
+    @media(max-width: 1052px) {
+      grid-template-columns: 60%;
+      justify-content: center;
+    }
   }
 
   &__box{
@@ -62,5 +75,9 @@
 
   &__text{
     width: 430px;
+
+    @media(max-width: 1052px) {
+      width: 100%;
+    }
   }
 }
