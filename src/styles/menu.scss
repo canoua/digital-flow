@@ -8,6 +8,10 @@
   background-color:  #191A1E;
   z-index: 10;
 
+  @media(max-width: 767px) {
+    width: 100%;
+  }
+
   &-container{
     padding: 44px 80px;
     height: 100%;

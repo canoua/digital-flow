@@ -29,11 +29,19 @@ li{
   line-height: 90px;
   text-transform: uppercase;
   color: #212733;
+
+  @media(max-width: 900px) {
+    font-size: 60px;
+  }
 }
 
 .title-2{
   font-size: 48px;
   font-weight: 500;
+
+  @media(max-width: 900px) {
+    font-size: 40px;
+  }
 }
 
 .title-3{
