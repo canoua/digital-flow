@@ -44,6 +44,10 @@
         align-items: center;
         order: 1;
       }
+
+      @media(max-width: 900px) {
+        padding: 50px 0;
+      }
   
       &-inner{
         width: 500px;
@@ -64,6 +68,10 @@
     @media(max-width: 1160px) {
       text-align: center;
     }
+
+    @media(max-width: 900px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__box > img {
@@ -76,6 +84,10 @@
 
     &_mb40{
       margin-bottom: 40px;
+
+      @media(max-width: 900px) {
+        margin-bottom: 20px;
+      }
     }
 
     @media(max-width: 1160px) {

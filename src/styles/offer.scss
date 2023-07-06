@@ -2,6 +2,10 @@
   background-color: #1A1F25;
   padding: 90px 0;
 
+  @media(max-width: 900px) {
+    padding: 50px 0;
+  }
+
   &-inner{
     display: grid;
     grid-template-columns: repeat(5, 245px);
@@ -25,6 +29,10 @@
 
     &_mb{
       margin-bottom: 80px;
+
+      @media(max-width: 900px) {
+        margin-bottom: 30px;
+      }
     }
   }
 

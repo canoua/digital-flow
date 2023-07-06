@@ -7,6 +7,10 @@
   padding-top: 103px;
   color: #E6E6E6;
 
+  @media(max-width: 900px) {
+    padding-top: 50px;
+  }
+
   &-inner{
     display: flex;
     justify-content: space-between;
@@ -79,6 +83,10 @@
 
   &-copy{
     padding-bottom: 103px;
+
+    @media(max-width: 900px) {
+      padding-bottom: 50px;
+    }
 
     &-inner{
       padding-top: 46px;

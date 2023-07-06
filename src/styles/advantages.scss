@@ -5,6 +5,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media(max-width: 900px) {
+    padding-bottom: 90px;
+  }
+
   @media(max-width: 1200px) {
     background-position: center;
   }
@@ -14,6 +18,10 @@
 
     @media(max-width: 1253px) {
       text-align: center;
+    }
+
+    @media(max-width: 900px) {
+      margin-bottom: 60px;
     }
   }
 
