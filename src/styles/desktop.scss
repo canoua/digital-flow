@@ -7,11 +7,23 @@
   padding-top: 26px;
   position: relative;
 
+  @media(max-width: 575px) {
+    height: 807px;
+  }
+
+  @media(max-width: 478px) {
+    height: 708px;
+  }
+
   &-inner{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 70px;
+
+    @media(max-width: 478px) {
+      padding-top: 0px;
+    }
   }
   
   &__header{
@@ -35,6 +47,10 @@
     line-height: 22px;
     color: #000;
     margin-bottom: 45px;
+
+    @media(max-width: 575px) {
+      margin-bottom: 30px;
+    }
   }
 }
 

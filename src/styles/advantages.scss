@@ -34,6 +34,14 @@
       grid-template-columns: 60%;
       justify-content: center;
     }
+
+    @media(max-width: 575px) {
+      grid-template-columns: 80%;
+    }
+
+    @media(max-width: 478px) {
+      grid-template-columns: 100%;
+    }
   }
 
   &__box{

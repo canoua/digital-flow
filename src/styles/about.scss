@@ -82,6 +82,10 @@
   &__text{
     text-align: right;
 
+    @media(max-width: 402px) {
+      padding: 0 5px;
+    }
+
     &_mb40{
       margin-bottom: 40px;
 
