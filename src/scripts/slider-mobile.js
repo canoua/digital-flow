@@ -10,10 +10,6 @@ function swiperFeedbackInit() {
   });
 }
 
-function detectDevice() {
-  if(/Android|iPhone|iPad|iPod|IEMobile/i.test(navigator.userAgent)){
-    swiperFeedbackInit();
-  } else{}
+if (document.documentElement.clientWidth < 1254) {
+  swiperFeedbackInit();
 }
-
-detectDevice();

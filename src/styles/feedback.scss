@@ -305,11 +305,21 @@
 }
 
 .swiper {
-  width: 70%;
+  width: 100%;
   height: 300px;
+
+  @media(max-width: 1254px) {
+    width: 70%;
+  }
 
   @media(max-width: 375px) {
     width: 80%;
+  }
+
+  &-wrapper{
+    @media(min-width: 1254px) {
+      padding-right: 14px;
+    }
   }
 }
 
