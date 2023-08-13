@@ -193,6 +193,10 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @media screen and (width: 1024px) and (height: 600px) {
+      margin-right: 0;
+    }
+
     @media(max-width: 767px) {
       margin-right: 0;
       align-items: center;
@@ -256,6 +260,11 @@
 
       @media(max-width: 1253px) {
         padding-left: 20px;
+      }
+
+      //for nest hub
+      @media screen and (width: 1024px) and (height: 600px) {
+        padding-left: 0;
       }
 
       @media(max-width: 900px) {
