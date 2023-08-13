@@ -23,6 +23,8 @@ const sync = require('browser-sync').create()
 //конвертация шрифтов
 const fonter = require('gulp-fonter-unx');
 const ttf2woff2 = require('gulp-ttf2woff2');
+//sourcemaps
+const sourcemaps = require('gulp-sourcemaps');
 
 
 function html() {
@@ -38,22 +40,26 @@ function html() {
 
 function scripts() {
   return src('src/scripts/*.js')
+    .pipe(sourcemaps.init())
     .pipe(concat('app.min.js'))
     .pipe(uglify())
+    .pipe(sourcemaps.write())
     .pipe(dest('build/scripts'))
 }
 
 function styles() {
   return src('src/styles/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(concat('style.css'))
     .pipe(autoPrefixer(['last 2 versions']))
     .pipe(sass().on('error', sass.logError))
     .pipe(csso())
+    .pipe(sourcemaps.write())
     .pipe(dest('build/styles/'))
 }
 
 function imageminification() {
-  return src('src/images/**/*')
+  return src('src/images/*')
     .pipe(imagemin())
     .pipe(dest('build/images'))
 }
@@ -71,12 +77,12 @@ function fonts() {
     .pipe(dest('src/fonts'))
     .pipe(dest('build/fonts'))
 }
-// function fontsWoff2() {
-//   return src('src/fonts/*')
-//     .pipe(ttf2woff2())
-//     .pipe(dest('src/fonts'))
-//     .pipe(dest('build/fonts'))
-// }
+function fontsWoff2() {
+  return src('src/fonts/*')
+    .pipe(ttf2woff2())
+    .pipe(dest('src/fonts'))
+    .pipe(dest('build/fonts'))
+}
 
 function buildFonts() {
   return src('src/fonts/*')
@@ -102,7 +108,7 @@ function serve() {
 
 //перед работой сконвертировать шрифты
 exports.fonts = fonts
-// exports.fontsWoff2 = fontsWoff2
+exports.fontsWoff2 = fontsWoff2
 exports.buildFonts = buildFonts
 
 //для тестов
@@ -110,7 +116,7 @@ exports.cleanBuild = cleanBuild
 exports.imageminification = imageminification
 
 //build
-exports.build = parallel(buildFonts, html, imageminification, styles, scripts)
+exports.build = parallel(fonts, buildFonts, html, imageminification, styles, scripts)
 
 //serve
 exports.serve = serve
