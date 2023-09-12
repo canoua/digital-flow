@@ -2,11 +2,9 @@
   position: relative;
   padding: 173px 0;
   height: auto;
-
   @media(max-width: 900px) {
     padding: 90px 0;
   }
-
   &::before{
     content: '';
     width: 50%;
@@ -18,12 +16,10 @@
     top: 0;
     left: 0;
     z-index: -1;
-
     @media(max-width: 1253px) {
       width: 100%;
     }
   }
-
   &::after{
     content: '';
     width: 50%;
@@ -38,7 +34,6 @@
       display: none;
     }
   }
-
   &-inner{
     display: flex;
     justify-content: space-between;
@@ -49,79 +44,61 @@
       align-items: center;
     }
   }
-
   &__box{
     width: 50%;
-
     @media(max-width: 1253px) {
       width: 70%;
     }
-
     &:first-child{
-      
       @media(max-width: 1253px) {
         margin-bottom: 100px;
       }
-
       @media(max-width: 575px) {
         width: 80%;
       }
-
       @media(max-width: 478px) {
         width: 100%;
       }
     }
-
     &:last-child{
-
       @media(max-width: 900px) {
         width: 100%;
       }
     }
   }
-
   &__title{
     color: #fff;
     margin-bottom: 80px;
-
     @media(max-width: 1253px) {
       text-align: center;
     }
-
     @media(max-width: 900px) {
       margin-bottom: 50px;
     }
-
     &_right{
       text-align: right;
-
       @media(max-width: 1253px) {
         text-align: center;
       }
     }
   }
-
   &__form{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-right: 73px;
-
     @media(max-width: 1253px) {
       padding-right: 0;
     }
-
     &__group{
       display: flex;
       flex-direction: column;
       margin-bottom: 40px;
-
       &:last-child{
         margin-bottom: 60px;
       }
     }
   }
-
   &__label{
     color: #FFF;
     font-size: 16px;
@@ -130,7 +107,6 @@
     line-height: normal;
     margin-bottom: 10px;
   }
-
   &__input,
   &__textarea{
     border-left: none;
@@ -145,11 +121,9 @@
     font-family: 'Montserrat';
     font-style: normal;
   }
-
   &__textarea{
     resize: none;
   }
-
   &__btn{
     width: 194px;
     padding: 14px 30px;
@@ -163,25 +137,10 @@
     border: 1px solid #FFF;
     cursor: pointer;
     text-align: left;
-    position: relative;
-
-    &::after{
-      content: '';
-      background-image: url('./../images/right-arrow-white.svg');
-      width: 12px;
-      height: 12px;
-      background-size: contain;
-      position: absolute;
-      right: 30px;
-      top: 50%;
-      transform: translate(0, -50%);
-    }
-
     @media(max-width: 1253px) {
       margin: 0 auto;
     }
   }
-
   &__card{
     color: #fff;
     width: 33%;
@@ -192,21 +151,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     @media screen and (width: 1024px) and (height: 600px) {
       margin-right: 0;
     }
-
     @media(max-width: 767px) {
       margin-right: 0;
       align-items: center;
       justify-content: center;
     }
-
     &:last-child{
       margin-right: 0;
     }
-
     &::before{
       content: "";
       position: absolute;
@@ -216,12 +171,10 @@
       height: 2px;
       background-color: #000;
       z-index: 1;
-
       @media(max-width: 1253px) {
         display: none;
       }
     }
-
     &::after{
       content: '';
       position: absolute;
@@ -235,43 +188,35 @@
       width: 78px;
       height: 39px;
       border-radius: 0 0 50% 50% / 0 0 100% 100%;
-
       @media(max-width: 1253px) {
         display: none;
       }
     }
-
     &_active{
       background-image: url('./../images/feedback-card-bg.png');
       background-repeat: no-repeat;
       background-size: cover;
       border: transparent;
-
       &::after{
         border: 1px solid #000;
       }
     }
-
     &-wrapper{
       padding-left: 30px;
       display: flex;
       justify-content: space-between;
       width: 100%;
-
       @media(max-width: 1253px) {
         padding-left: 20px;
       }
-
       //for nest hub
       @media screen and (width: 1024px) and (height: 600px) {
         padding-left: 0;
       }
-
       @media(max-width: 900px) {
         padding-left: 0;
       }
     }
-
     &__title{
       font-size: 20px;
       font-style: normal;
@@ -279,7 +224,6 @@
       line-height: normal;
       margin-bottom: 15px;
     }
-
     &__info{
       color: #E8E8E8;
       font-size: 16px;
@@ -288,12 +232,10 @@
       line-height: normal;
       margin-bottom: 44px;
     }
-
     &__sale{
       text-decoration: line-through;
       margin-bottom: 5px;
     }
-
     &__price{
       font-size: 24px;
       font-family: Montserrat;
@@ -303,26 +245,21 @@
     }
   }
 }
-
 .swiper {
   width: 100%;
   height: 300px;
-
   @media(max-width: 1254px) {
     width: 70%;
   }
-
   @media(max-width: 375px) {
     width: 80%;
   }
-
   &-wrapper{
     @media(min-width: 1254px) {
       padding-right: 14px;
     }
   }
 }
-
 .swiper-pagination-bullet{
   background-color: #fff;
 }

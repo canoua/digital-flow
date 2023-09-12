@@ -16,12 +16,10 @@ li{
 .container{
   width: 1214px;
   margin: 0 auto;
-
   @media(max-width: 1253px) {
     width: auto;
     padding: 0 30px;
   }
-
   @media(max-width: 575px) {
     padding: 0 15px;
   }
@@ -33,19 +31,15 @@ li{
   line-height: 90px;
   text-transform: uppercase;
   color: #212733;
-
   @media(max-width: 900px) {
     font-size: 60px;
   }
-
   @media(max-width: 683px) {
     font-size: 48px;
   }
-
   @media(max-width: 575px) {
     font-size: 36px;
   }
-
   @media(max-width: 402px) {
     font-size: 30px;
   }
@@ -54,11 +48,9 @@ li{
 .title-2{
   font-size: 48px;
   font-weight: 500;
-
   @media(max-width: 900px) {
     font-size: 40px;
   }
-
   @media(max-width: 402px) {
     font-size: 27px;
   }
@@ -85,13 +77,12 @@ li{
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   &:hover{
     background-image: url('./../images/feedback-card-bg.png');
     color: #fff;
-    border: none;
+    border-color: transparent;
+    background-position: center -1px;
   }
-
   &:hover svg > g > path{
     fill: #fff;
   }
