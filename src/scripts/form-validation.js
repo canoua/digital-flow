@@ -1,25 +1,22 @@
-import JustValidate from "just-validate";
+let form = document.querySelector('#form');
+let inputs = document.querySelectorAll('.input');
+let formItems = document.querySelectorAll('.feedback__form__group');
+let submitBtn = document.querySelector('.feedback__btn');
 
-const formValidate = new window.JustValidate('#form');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  for(let i=0; i<inputs.length; i++) {
+    if(inputs[i].value == ''){
+      let error = document.createElement('div');
+      error.textContent = 'Ошибка';
+      error.style.cssText = 'color: red; position: absolute;';
 
-validation
-  .addField('#name', [
-    {
-      rule: 'minLength',
-      value: 3,
-    },
-    {
-      rule: 'maxLength',
-      value: 30,
-    },
-  ])
-  .addField('#email', [
-    {
-      rule: 'required',
-      errorMessage: 'Email is required',
-    },
-    {
-      rule: 'email',
-      errorMessage: 'Email is invalid!',
-    },
-  ]);
+      for(let j=0; j<formItems.length; j++) {
+        formItems[j].prepend(error);
+        formItems[j].style.cssText = 'position: relative;';
+      }
+
+      submitBtn.setAttribute('disabled', 'disabled');
+    }
+  }
+})

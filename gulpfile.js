@@ -59,7 +59,7 @@ function styles() {
 }
 
 function imageminification() {
-  return src('src/images/*')
+  return src('src/images/**/*')
     .pipe(imagemin())
     .pipe(dest('build/images'))
 }
