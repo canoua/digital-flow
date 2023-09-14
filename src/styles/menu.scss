@@ -7,15 +7,15 @@
   transition: all .5s;
   background-color:  #191A1E;
   z-index: 10;
-
+  @media(max-width: 1366px) {
+    width: 50%;
+  }
   @media(max-width: 767px) {
     width: 100%;
   }
-
   &-container{
     padding: 44px 80px;
     height: 100%;
-
     @media(max-width: 767px) {
       padding: 34px 33px
     }
