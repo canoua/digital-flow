@@ -32,9 +32,9 @@ function html() {
     .pipe(include({
       prefix: '@@'
     }))  
-    .pipe(htmlmin({
-      collapseWhitespace: true
-    }))
+    // .pipe(htmlmin({
+      // collapseWhitespace: true
+    // }))
     .pipe(dest('build'))
 }
 
@@ -42,7 +42,7 @@ function scripts() {
   return src('src/scripts/*.js')
     .pipe(sourcemaps.init())
     .pipe(concat('app.min.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(dest('build/scripts'))
 }
@@ -53,7 +53,7 @@ function styles() {
     .pipe(concat('style.css'))
     .pipe(autoPrefixer(['last 2 versions']))
     .pipe(sass().on('error', sass.logError))
-    .pipe(csso())
+    // .pipe(csso())
     .pipe(sourcemaps.write())
     .pipe(dest('build/styles/'))
 }
